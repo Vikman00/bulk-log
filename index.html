@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6f6f1">
+    <meta name="description" content="A simple, private workout and body-weight log for your bulk.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Bulk Log">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./icon-180.png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Bulk Log — your training, recorded</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <dialog id="exercise-dialog" class="exercise-dialog" aria-labelledby="picker-title"></dialog>
+    <dialog id="muscle-dialog" class="muscle-dialog" aria-labelledby="muscle-title"></dialog>
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+    <script src="./exercise-library.js" defer></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
