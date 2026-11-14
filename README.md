@@ -26,9 +26,9 @@ Hosting has not been configured yet. The app itself does not require a paid acco
 ## Logging
 
 - On **Daily Log**, choose today or an earlier date and record your body weight first. The app uses the device's local date and time; future dates cannot be edited. Your saved weight appears prominently; use **Change** if you need to edit it. Choose an exercise from the illustrated library to see its main and assisting muscles, add it to the log, and enter its weight and rep count after each set. Tap a muscle picture to enlarge it, or choose **View muscles** on a logged exercise to see the pictures again. Use weight `0` for a bodyweight set. You can still add a custom exercise by name.
-- Open **History** to revisit a day. Use **Edit** beside a set to update or delete it.
-- View your body-weight history on **Progress**.
-- On **Progress**, choose kilograms or pounds and set your bulk's actual start date. Existing weights are converted when changing units.
+- On **Calories**, enter your sex, age, height, body fat %, daily activity, sport per week and goal once; they carry over to every day and can be changed with **Edit**. Daily calories, protein, carbs and fat are calculated the same way as the [ESN calorie calculator](https://www.esn.com/pages/kalorienrechner), using that day's body weight or, if none is logged, the most recent earlier weight. Scan a food's barcode (or type its number) to look it up in [Open Food Facts](https://world.openfoodfacts.org), enter the grams you ate, and it is subtracted from the day's targets. Foods not in the database can be added manually from the label. Scanning needs the camera, so the app must be opened from an `https://` address (or `localhost`); looking up a new barcode needs an internet connection.
+- To revisit an earlier day, use the date picker or arrows on the Daily Log. Use **Edit** beside a set to update or delete it.
+- On **Progress**, choose **Weekly** (a point per day) or **Monthly** (a point per week, averaged) and step back with the arrows. It charts your body weight, and for any exercise you've logged, the top weight lifted and how many sets were done at that top weight. Tap a chart to see a day's or week's numbers.
 
 ## Backups and privacy
 

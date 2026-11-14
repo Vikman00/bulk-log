@@ -208,7 +208,120 @@ body.dialog-open { overflow: hidden; }
 .custom-copy { margin-bottom: 20px; }
 .custom-copy + form .picker-day { margin-top: 12px; }
 .custom-submit { width: 100%; margin-top: 14px; }
+.confirm-dialog { width: min(360px, calc(100% - 40px)); max-width: none; padding: 0; border: 0; border-radius: 20px; color: var(--ink); background: #fff; box-shadow: 0 20px 70px rgba(20, 36, 25, .3); }
+.confirm-dialog::backdrop { background: rgba(17, 29, 21, .55); }
+.confirm-box { padding: 22px; }
+.confirm-box h2 { font-size: 16px; font-weight: 800; line-height: 1.4; letter-spacing: -.02em; }
+.confirm-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+.button-danger { color: white; background: #b0442f; }
+/* Progress charts */
+.period-bar { display: grid; gap: 10px; margin-bottom: 15px; max-width: 420px; }
+.period-toggle { display: grid; grid-template-columns: 1fr 1fr; }
+.period-toggle button { width: auto; height: 38px; padding: 0 16px; font-size: 12px; }
+.period-nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.period-title { flex: 1; text-align: center; font-size: 13px; font-weight: 800; letter-spacing: -.02em; }
+.chart-card { padding: 20px; margin-bottom: 15px; }
+.chart-head h2 { margin-top: 6px; font-size: 17px; font-weight: 800; letter-spacing: -.035em; }
+.exercise-select { margin-top: 14px; padding: 8px 12px 8px 8px; background: #fbfcf9; }
+.exercise-select img, .progress-exercise-list img, .thumb-fallback { width: 58px !important; height: 58px !important; border-radius: 11px; }
+.exercise-select .library-row-text > span:first-child { color: #8a988a; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.thumb-fallback { display: grid; place-items: center; flex: 0 0 auto; background: #eef3e8; color: #64865f; }
+.thumb-fallback svg { width: 26px; height: 26px; }
+.select-chevron { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: #f0f4ec; color: #4f6a52; flex-shrink: 0; }
+.select-chevron svg { width: 15px; height: 15px; transform: rotate(90deg); transition: transform .15s; }
+.select-chevron.open svg { transform: rotate(-90deg); }
+.progress-exercise-list { margin-top: 8px; }
+.progress-exercise-list .library-row { padding: 8px; }
+.progress-exercise-list .library-row.selected { border-color: var(--green); background: #f3f7ee; }
+.selected-check { padding: 0 8px; color: var(--green); font-size: 16px; font-weight: 800; }
+.metric-row { display: flex; gap: 8px; margin: 14px 0 10px; }
+.metric-row > div { flex: 1; display: grid; gap: 4px; padding: 10px 11px; border-radius: 12px; background: #f3f6ef; min-width: 0; }
+.metric-row span { color: #7f8e80; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.metric-row strong { font-size: 17px; font-weight: 800; letter-spacing: -.04em; white-space: nowrap; }
+.metric-row strong span { font-size: 11px; letter-spacing: 0; text-transform: none; color: #8d9a8d; }
+.chart-subtitle { margin: 14px 0 2px; color: #4f6252; font-size: 12px; font-weight: 800; }
+.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.chart-grid { stroke: #edf1ea; stroke-width: 1; }
+.chart-tick, .chart-xsub { fill: #9aa69b; font-size: 9px; font-weight: 600; }
+.chart-xlabel { fill: #6f8072; font-size: 9.5px; font-weight: 700; }
+.chart-line { fill: none; stroke: var(--green); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart-dot { fill: var(--green); stroke: white; stroke-width: 2; pointer-events: none; }
+.chart-bar { fill: #6f9a5d; pointer-events: none; }
+.chart-hit { fill: transparent; cursor: pointer; }
+.chart-hit.active { fill: rgba(24, 57, 43, .06); }
+.chart-readout { margin-top: 8px; padding: 10px 12px; border-radius: 11px; background: #eff4ea; color: #2f4436; font-size: 12px; font-weight: 700; line-height: 1.45; }
+.chart-hint { margin-top: 6px; color: #9aa69b; font-size: 10px; }
+.chart-empty { margin-top: 14px; padding: 22px 12px; border-radius: 12px; background: #f6f8f3; color: #8b998d; font-size: 12px; text-align: center; line-height: 1.5; }
+/* Collapsible exercise cards */
+.exercise-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+.collapse-toggle { display: grid; place-items: center; flex: 0 0 auto; width: 36px; height: 36px; border: 0; border-radius: 10px; background: #f0f4ec; color: #4f6a52; }
+.collapse-toggle svg { width: 16px; height: 16px; transform: rotate(-90deg); transition: transform .15s; }
+.collapse-toggle[aria-expanded="false"] svg { transform: rotate(90deg); }
+.exercise-card.collapsed { padding: 11px 12px 11px 11px; }
+.exercise-card.collapsed .exercise-card-image { width: 44px; height: 44px; border-radius: 10px; }
+.collapsed-open { flex: 1; padding: 0; border: 0; background: transparent; color: var(--ink); text-align: left; }
+.collapsed-open > span { display: grid; gap: 3px; min-width: 0; }
+.collapsed-open .exercise-name { font-size: 14px; }
+.collapsed-open .exercise-meta { margin-top: 0; }
+.collapse-all { padding: 0 2px; min-height: 0 !important; color: #557a58; font-size: 11px; text-decoration: underline; text-underline-offset: 2px; }
+/* Calories tab */
+select.field { appearance: none; -webkit-appearance: none; padding-right: 34px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23718175' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; background-size: 16px; }
+.calorie-empty { margin-top: 18px; color: #c9d8c6; font-size: 13px; line-height: 1.55; }
+.calorie-summary { margin-top: 21px; }
+.calorie-sub { margin-top: 9px; color: #b8cbb7; font-size: 12px; }
+.calorie-sub strong { color: white; }
+.macro-list { display: grid; gap: 13px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); }
+.macro-top { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; color: #c6d6c3; }
+.macro-top > span:first-child { color: white; font-weight: 800; }
+.macro-top strong { color: white; }
+.macro-bar { height: 7px; margin-top: 7px; border-radius: 99px; background: rgba(255,255,255,.13); overflow: hidden; }
+.macro-bar span { display: block; height: 100%; border-radius: inherit; background: var(--lime); }
+.macro-left { margin-top: 5px; color: #9fb59f; font-size: 10px; font-weight: 700; }
+.calorie-basis { margin-top: 16px; color: #9fb59f; font-size: 10px; line-height: 1.5; }
+.profile-form { display: grid; gap: 15px; }
+.profile-form label { display: block; }
+.profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.choice-group { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 3px; background: #edf2e9; border-radius: 12px; }
+.choice-group.three { grid-template-columns: repeat(3, 1fr); }
+.choice { position: relative; display: block; }
+.choice input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+.choice span { display: grid; place-items: center; min-height: 38px; padding: 0 6px; border-radius: 9px; color: #6f8072; font-size: 12px; font-weight: 800; text-align: center; }
+.choice input:checked + span { background: white; color: var(--green); box-shadow: 0 2px 5px #dfe8da; }
+.choice input:focus-visible + span { outline: 3px solid #8bb75b; outline-offset: 1px; }
+.profile-summary-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.profile-summary-top .setting-copy { margin-bottom: 12px; }
+.food-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+.food-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 17px; }
+.food-info { display: grid; gap: 4px; min-width: 0; }
+.food-info strong { font-size: 14px; font-weight: 800; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.food-info span { color: #8d9a8d; font-size: 11px; }
+.food-info small { color: #5b805c; font-size: 10px; font-weight: 700; }
+.food-side { display: grid; justify-items: end; flex-shrink: 0; }
+.food-kcal { font-size: 17px; font-weight: 800; letter-spacing: -.04em; }
+.food-kcal small { color: #a4afa3; font-size: 10px; letter-spacing: 0; }
+.scanner-frame { position: relative; overflow: hidden; aspect-ratio: 4 / 3; border-radius: 16px; background: #13241a; }
+.scanner-frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.scanner-guide { position: absolute; left: 12%; right: 12%; top: 32%; bottom: 32%; border: 2px solid var(--lime); border-radius: 12px; box-shadow: 0 0 0 999px rgba(10, 20, 14, .35); }
+.scanner-status { margin-top: 10px; color: #6f8072; font-size: 12px; line-height: 1.5; text-align: center; }
+.code-form { margin-top: 16px; }
+.recent-foods { margin-top: 20px; }
+.recent-row { padding: 12px 13px; }
+.food-code { margin-top: 6px; color: #8e9c8e; font-size: 11px; }
+.food-edit-name { margin-top: 0 !important; }
+.food-note { margin: 12px 0 4px; padding: 11px 13px; border-radius: 11px; background: #fff4dd; color: #795417; font-size: 12px; line-height: 1.5; }
+.per100-grid, .amount-totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.per100-grid div, .amount-totals div { display: grid; gap: 3px; padding: 11px 6px; border-radius: 12px; background: white; border: 1px solid #e8eee5; text-align: center; }
+.amount-totals div { background: #e8f1df; border-color: #e8f1df; }
+.per100-grid strong, .amount-totals strong { font-size: 16px; font-weight: 800; letter-spacing: -.03em; }
+.per100-grid span, .amount-totals span { color: #7f8e80; font-size: 9px; font-weight: 700; }
+.amount-form { margin-top: 18px; }
+.manual-form { display: grid; gap: 12px; margin-top: 16px; }
+.manual-form label { display: block; }
+.manual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 @media (max-width: 650px) {
+  .food-buttons { flex-direction: column; }
+  .food-buttons .button { width: 100%; }
+  .profile-grid { gap: 6px; }
   .app-shell { padding: 0 20px calc(98px + env(safe-area-inset-bottom)); }
   .topbar { height: 70px; }
   .desktop-nav { display: none; }
